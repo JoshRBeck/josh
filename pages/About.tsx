@@ -25,7 +25,7 @@ const About: React.FC<AboutProps> = ({ items }) => {
               key={index}
               className="flex flex-col md:flex-row items-center justify-center mb-8 p-5"
             >
-              <div className="mb-4 md:1/2 h-auto flex items-center md:mr-8 md:mb-0 p-5">
+              <div className="mb-4 md:1/2 h-auto flex items-center md:mr-8 md:mb-0">
                 <Image
                   src={item.imageSrc}
                   width={300}

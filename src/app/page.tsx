@@ -7,6 +7,10 @@ import Me from "../../public/Me.jpg";
 import ProjectsPage from "../../pages/Projects";
 import Kijufi from "../../public/Kijuf.png";
 import Sunshine from "../../public/Sunshine.png";
+import ContactJosh from "../../pages/Contact";
+import Email from "../../public/Email.svg"
+import Github from "../../public/Github.svg"
+import LinkedIn from "../../public/LinkedIn.svg"
 
 const expertiseItems = [
   {
@@ -47,6 +51,21 @@ const ProjectsStructure = [
   },
 ];
 
+const ContactStructure = [
+  {
+    iconSrc: Email,
+    title: "My Email",
+  },
+  {
+    iconSrc: LinkedIn,
+    title: "My LinkedIn Profile",
+  },
+  {
+    iconSrc: Github,
+    title:"My Github Profile"
+  }
+]
+
 export default function Home() {
   return (
     <div className="bg-gradient-to-r from-[#5a3f37] to-[#2c7744]">
@@ -62,6 +81,7 @@ export default function Home() {
       <Expertise items={expertiseItems} />
       <About items={AboutProps} />
       <ProjectsPage items={ProjectsStructure} />
+      <ContactJosh items={ContactStructure}/>
     </div>
   );
 }

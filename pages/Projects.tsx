@@ -13,44 +13,42 @@ interface ProjectsProps {
   items: ProjectsStructure[];
 }
 
-const ProjectsStructure: ProjectsStructure[] = [
-  {
-    imageSrc: Sunshine,
-    title: "Sunshine Wine App",
-    description:
-      "My final project from my time with Ironhack. We collaborated with students from the UX/UI team to take their vision and create an app for helping choose the correct wine for your situation based on your mood or setting. For this project, we used both a back-end database and authentication system using MongoDB, and Express. For the front end, we used what we learned with HTML, CSS, Javascript and React to build the app.",
-  },
-  {
-    imageSrc: Kijufi,
-    title: "Kinderrechte FilmFestival - Kijufi Berlin",
-    description:
-      "I was contacted by kijufi – Landesverband Kinder- und Jugendfilm Berlin e. V. to help create a website for an upcoming film festival in Berlin to promote youth and children being involved in film and media. For this project, I used React, Javascript and Tailwind. The goal was to create a responsive, mobile and exciting design in collaboration with the UX/UI designer.",
-  },
-];
-
 const ProjectsPage: React.FC<ProjectsProps> = ({ items }) => {
   return (
-    <div className="flex flex-col justify-center items-center">
-      <h1 className="text-4xl md:text-6xl text-[#c3c4c7] font-['Bebas']">
+    <section className="flex flex-col justify-center items-center p-5">
+      <h1 className="text-4xl pb-5 md:text-6xl text-[#c3c4c7] font-['Bebas']">
         My Projects
       </h1>
-      <div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
         {items.map((item, index) => (
-          <div key={index}>
-            <div>
-              <Image
-                src={item.imageSrc}
-                alt={`${item.title} source`}
-                width={200}
-                height={200}
-              />
+          <div
+            key={index}
+            className="flex flex-col h-auto border-white border-4 rounded-lg p-5 mb-5 items-center"
+          >
+            <div className="flex flex-col items-center mb-4 md:mb-0 md:flex-row">
+              <div className="w-1/4 md:w-1/3 pr-4">
+                <Image
+                  src={item.imageSrc}
+                  alt={`${item.title} source`}
+                  className="max-w-full rounded-lg"
+                  layout="responsive"
+                  width={300}
+                  height={300}
+                />
+              </div>
+              <div className="w-3/4 md:flex-grow">
+                <h2 className="text-[#c3c4c7] text-3xl text-center p-6 font-['Bebas'] font-medium">
+                  {item.title}
+                </h2>
+                <p className="text-[#c3c4c7] text-md md:text-lg font-['Bebas'] font-normal">
+                  {item.description}
+                </p>
+              </div>
             </div>
-            <h2>{item.title}</h2>
-            <p>{item.description}</p>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
