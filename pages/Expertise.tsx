@@ -1,14 +1,14 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 
-interface ExpertiseItem {
+interface ExpertiseStructure {
   logoSrc: StaticImageData;
   title: string;
   description: string;
 }
 
 interface ExpertiseProps {
-  items: ExpertiseItem[];
+  items: ExpertiseStructure[];
 }
 
 const Expertise: React.FC<ExpertiseProps> = ({ items }) => {
