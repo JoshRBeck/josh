@@ -1,6 +1,6 @@
-import Email from "../public/Email.svg";
-import LinkedIn from "../public/LinkedIn.svg";
-import Github from "../public/Github.svg";
+import Email from "../public/SVGs/Email.svg";
+import LinkedIn from "../public/SVGs/LinkedIn.svg";
+import Github from "../public/SVGs/Github.svg";
 
 const ContactStructure = [
   {

@@ -18,7 +18,7 @@ const ContactJosh: React.FC<ContactProps> = ({ items }) => {
           Contact Me
         </h1>
         <div className="flex flex-col px-5 w-full md:flex-row items-center ">
-          {items.map((item, index) => (
+          {items && items.map((item, index) => (
             <div
               key={index}
               className="flex flex-col md:flex-row mx-4 py-2 border-white border-4 rounded-lg  justify-center items-center mb-4 md:mb-0 w-full md:w-[33.333%]"

@@ -19,7 +19,7 @@ const Expertise: React.FC<ExpertiseProps> = ({ items }) => {
           My expertise
         </h1>
         <div className="flex flex-col md:flex-row first-letter:p-5">
-          {items.map((item, index) => (
+          {items && items.map((item, index) => (
             <div
               key={index}
               className="flex flex-col h-auto w-full md:w-1/2 border-white border-4 rounded-lg md:border-6 p-5 mb-5 md:m-5 items-center"

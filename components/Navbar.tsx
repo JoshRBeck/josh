@@ -21,7 +21,8 @@ const Navbar: React.FC = () => {
   return (
     <div className="flex flex-row bg-gradient-to-r from-[#5a3f37] to-[#2c7744] p-4">
       <h1 className="w-1/4 text-[#2dc7ed] text-4xl md:text-5xl font-extrabold">
-        Joshua Beck<span>.</span>
+        Joshua Beck
+        <span>.</span>
         <span className="text-[#a234d9]">_</span>
       </h1>
       <nav className="w-3/4 px-5 flex justify-end">

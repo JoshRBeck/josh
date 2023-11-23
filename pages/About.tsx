@@ -21,30 +21,31 @@ const About: React.FC<AboutProps> = ({ items }) => {
           About Me
         </h1>
         <div className="flex flex-col md:flex-row">
-          {items.map((item, index) => (
-            <div
-              key={index}
-              className="flex flex-col md:flex-row items-center justify-center mb-8 p-5"
-            >
-              <div className="mb-4 md:1/2 h-auto flex items-center md:mr-8 md:mb-0">
-                <Image
-                  src={item.imageSrc}
-                  width={300}
-                  height={200}
-                  alt={`${item.title} Logo`}
-                  className="rounded-xl border-4 border-gray-200"
-                />
+          {items &&
+            items.map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col md:flex-row items-center justify-center mb-8 p-5"
+              >
+                <div className="mb-4 md:1/2 h-auto flex items-center md:mr-8 md:mb-0">
+                  <Image
+                    src={item.imageSrc}
+                    width={300}
+                    height={200}
+                    alt={`${item.title} Logo`}
+                    className="rounded-xl border-4 border-gray-200"
+                  />
+                </div>
+                <div className="flex flex-col md:w-1/2 h-auto items-center">
+                  <h2 className="text-2xl font-[Bebas] text-[#c3c4c7]">
+                    {item.title}
+                  </h2>
+                  <p className="text-lg text-center font-[Bebas] text-[#c3c4c7]">
+                    {item.description}
+                  </p>
+                </div>
               </div>
-              <div className="flex flex-col md:w-1/2 h-auto items-center">
-                <h2 className="text-2xl font-[Bebas] text-[#c3c4c7]">
-                  {item.title}
-                </h2>
-                <p className="text-lg text-center font-[Bebas] text-[#c3c4c7]">
-                  {item.description}
-                </p>
-              </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
     </section>

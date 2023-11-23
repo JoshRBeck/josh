@@ -1,5 +1,5 @@
-import ReactSVG from "../public/React SVG.svg"
-import ComputerSVG from "../public/ComputerSVG.svg"
+import ReactSVG from "../public/SVGs/React.svg"
+import ComputerSVG from "../public/SVGs/ComputerSVG.svg"
 
 const ExpertiseStructure = [
   {

@@ -1,7 +1,5 @@
 import Image, { StaticImageData } from "next/image";
 import React from "react";
-import Sunshine from "../public/Sunshine.png";
-import Kijufi from "../public/Kijuf.png";
 
 interface ProjectsStructure {
   imageSrc: StaticImageData;
@@ -20,7 +18,7 @@ const ProjectsPage: React.FC<ProjectsProps> = ({ items }) => {
         My Projects
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-        {items.map((item, index) => (
+        {items && items.map((item, index) => (
           <div
             key={index}
             className="flex flex-col h-auto border-white border-4 rounded-lg p-5 mb-5 items-center"

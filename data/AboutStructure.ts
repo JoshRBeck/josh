@@ -1,4 +1,4 @@
-import Me from "../public/Me.jpg"
+import Me from "../public/Photos/Me.jpg"
 
 const AboutStructure = [
   {

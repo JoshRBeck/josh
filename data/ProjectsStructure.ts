@@ -1,5 +1,5 @@
-import Sunshine from "../public/Sunshine.png"
-import Kijufi from "../public/Kijuf.png"
+import Sunshine from "../public/Photos/Sunshine.png"
+import Kijufi from "../public/Photos/Kijuf.png"
 
 const ProjectsStructure = [
   {
