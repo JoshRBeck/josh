@@ -13,6 +13,7 @@ interface AboutProps {
 }
 
 const About: React.FC<AboutProps> = ({ items }) => {
+  console.log(items);
   return (
     <section>
       <div className="flex flex-col justify-center items-center">
