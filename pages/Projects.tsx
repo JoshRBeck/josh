@@ -26,10 +26,10 @@ const ProjectsPage: React.FC<ProjectsProps> = ({ items }) => {
             <div className="flex flex-col items-center mb-4 md:mb-0 md:flex-row">
               <div className="w-1/4 md:w-1/3 pr-4">
                 <Image
-                  src={item.imageSrc}
+                            layout="responsive"
+        src={item.imageSrc}
                   alt={`${item.title} source`}
                   className="max-w-full rounded-lg"
-                  layout="responsive"
                   width={300}
                   height={300}
                 />
