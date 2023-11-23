@@ -12,11 +12,10 @@ interface ContactProps {
   items: ContactStructure[];
 }
 
-const ContactLink: React.FC<{ href: string; children: ReactNode }> = ({ href, children }) => (
-  <Link href={href}>
-    <a>{children}</a>
-  </Link>
-);
+const ContactLink: React.FC<{ href: string; children: ReactNode }> = ({
+  href,
+  children,
+}) => <Link href={href}>{children}</Link>;
 
 const ContactJosh: React.FC<ContactProps> = ({ items }) => {
   return (
@@ -29,9 +28,7 @@ const ContactJosh: React.FC<ContactProps> = ({ items }) => {
           {items &&
             items.map((item, index) => (
               <ContactLink key={index} href={item.link}>
-                <div
-                  className="flex flex-col md:flex-row mx-4 py-2 border-white border-4 rounded-lg  justify-center items-center mb-4 md:mb-0 w-full md:w-[33.333%]"
-                >
+                <div className="flex flex-col md:flex-row mx-4 py-2 border-white border-4 rounded-lg justify-center items-center mb-4 md:mb-0 w-full md:w-[33.333%]">
                   <Image
                     src={item.iconSrc}
                     alt={item.title}

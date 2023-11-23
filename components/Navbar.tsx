@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
         >
           {links.map(([label, path]) => (
             <li key={label} className="mb-3">
-              <Link href={path}>{label}</Link>
+              <Link href={path} legacyBehavior>{label}</Link>
             </li>
           ))}
         </ul>
@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
           <ul className="flex flex-col items-end">
             {links.map(([label, path]) => (
               <li key={label} className="mb-3">
-                <Link href={path}>{label}</Link>
+                <Link href={path} legacyBehavior>{label}</Link>
               </li>
             ))}
           </ul>
