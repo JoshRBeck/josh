@@ -13,7 +13,6 @@ interface AboutProps {
 }
 
 const About: React.FC<AboutProps> = ({ items }) => {
-  console.log(items);
   return (
     <section>
       <div className="flex flex-col justify-center items-center">
@@ -37,7 +36,7 @@ const About: React.FC<AboutProps> = ({ items }) => {
                   />
                 </div>
                 <div className="flex flex-col md:w-1/2 h-auto items-center">
-                  <h2 className="text-2xl font-[Bebas] text-[#c3c4c7]">
+                  <h2 className="text-2xl md:text-3xl font-[Bebas] text-[#c3c4c7]">
                     {item.title}
                   </h2>
                   <p className="text-lg text-center font-[Bebas] text-[#c3c4c7]">

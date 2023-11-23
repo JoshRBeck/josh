@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-row bg-gradient-to-r from-[#5a3f37] to-[#2c7744] p-4">
+    <div className="flex flex-row bg-gradient-to-r from-slate-900 via-stone-800 to-red-800 p-4">
       <h1 className="w-1/4 text-[#2dc7ed] text-4xl md:text-5xl font-extrabold">
         Joshua Beck
         <span>.</span>
