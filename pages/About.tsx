@@ -1,5 +1,5 @@
-import { StaticImageData } from "next/legacy/image";
-import Image from "next/legacy/image";
+import { StaticImageData } from "next/image";
+import Image from "next/image";
 import React from "react";
 
 interface AboutStructure {
@@ -33,7 +33,10 @@ const About: React.FC<AboutProps> = ({ items }) => {
                     height={200}
                     alt={`${item.title} Logo`}
                     className="rounded-xl border-4 border-gray-200"
-                  />
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }} />
                 </div>
                 <div className="flex flex-col md:w-1/2 h-auto items-center">
                   <h2 className="text-2xl md:text-3xl font-[Bebas] text-[#c3c4c7]">

@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/legacy/image";
+import Image, { StaticImageData } from "next/image";
 import React, { ReactNode } from "react";
 import Link from "next/link";
 
@@ -35,7 +35,10 @@ const ContactJosh: React.FC<ContactProps> = ({ items }) => {
                     width={45}
                     height={45}
                     className="mb-2 md:mr-2 md:mb-0"
-                  />
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }} />
                   <h2 className="text-[#c3c4c7] text-lg md:text-3xl font-['Bebas']">
                     {item.title}
                   </h2>
