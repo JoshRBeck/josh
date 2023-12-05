@@ -1,6 +1,6 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import useAnimationHook from "../hooks/useAnimation";
 
@@ -17,12 +17,38 @@ interface ProjectsProps {
 const ProjectsPage: React.FC<ProjectsProps> = ({ items }) => {
   const { controls, animation } = useAnimationHook({
     duration: 0.5,
-    delay: 0.5,
+    delay: 1,
   });
+9
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    controls.start("visible");
-  }, [controls]);
+    const onIntersection = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          controls.start("visible");
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(onIntersection, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    });
+
+    const currentRef = containerRef.current;
+
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, [containerRef, controls]);
 
   return (
     <section className="flex flex-col justify-center items-center p-5">

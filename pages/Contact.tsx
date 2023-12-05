@@ -28,7 +28,7 @@ const ContactJosh: React.FC<ContactProps> = ({ items }) => {
           {items &&
             items.map((item, index) => (
               <ContactLink key={index} href={item.link}>
-                <div className="flex flex-col md:flex-row mx-4 py-2 border-white border-4 rounded-lg justify-center items-center mb-4 md:mb-0 w-full md:w-[33.333%]">
+                <div className="flex flex-col md:flex-row mx-4 py-2 border-white border-4 rounded-lg justify-center items-center mb-4 md:mb-0 w-100 md:w-[33.333%]">
                   <Image
                     src={item.iconSrc}
                     alt={item.title}
@@ -37,8 +37,9 @@ const ContactJosh: React.FC<ContactProps> = ({ items }) => {
                     className="mb-2 md:mr-2 md:mb-0"
                     style={{
                       maxWidth: "100%",
-                      height: "auto"
-                    }} />
+                      height: "auto",
+                    }}
+                  />
                   <h2 className="text-[#c3c4c7] text-lg md:text-3xl font-['Bebas']">
                     {item.title}
                   </h2>
