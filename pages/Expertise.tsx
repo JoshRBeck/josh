@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import Image, { StaticImageData } from "next/image";
+import ExpertiseSkeleton from "../components/ExpertiseSkeleton";
 
 interface ExpertiseStructure {
   logoSrc: StaticImageData;
@@ -13,11 +14,17 @@ interface ExpertiseProps {
 }
 
 const Expertise: React.FC<ExpertiseProps> = ({ items }) => {
+  useEffect(() => {}, []);
+
+  if (!items) {
+    return <ExpertiseSkeleton />;
+  }
+
   return (
     <section className="">
       <div className="flex flex-col justify-center items-center p-5">
         <h1 className="text-4xl pb-5 m-24 md:text-6xl text-[#c3c4c7] font-['Merriweather']">
-          My expertise
+          My Expertise
         </h1>
         <div className="flex flex-col md:flex-row first-letter:p-5">
           {items &&
@@ -42,7 +49,7 @@ const Expertise: React.FC<ExpertiseProps> = ({ items }) => {
                     {item.title}
                   </h2>
                 </div>
-                <p className="text-[#c3c4c7] text-lg md:text-2xl font-['Roboto Slab'] font-normal">
+                <p className="text-[#c3c4c7] text-lg md:text-xl font-['Merriweather'] font-normal">
                   {item.description}
                 </p>
               </div>

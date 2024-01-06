@@ -1,4 +1,6 @@
+import React, { Suspense } from "react";
 import Expertise from "../pages/Expertise";
+import ExpertiseSkeleton from "../components/ExpertiseSkeleton";
 import About from "../pages/About";
 import ProjectsPage from "../pages/Projects";
 import ContactJosh from "../pages/Contact";
@@ -8,7 +10,7 @@ import AboutStructure from "../data/AboutStructure";
 import ProjectsStructure from "../data/ProjectsStructure";
 import ContactStructure from "../data/ContactStructure";
 
-export default function Home() {
+const HomePage = () => {
   return (
     <div className="bg-gradient-to-r from-slate-900 to-stone-800">
       <Navbar />
@@ -20,10 +22,14 @@ export default function Home() {
           Web developer
         </h3>
       </div>
-      <Expertise items={ExpertiseStructure} />
+      <Suspense fallback={<ExpertiseSkeleton />}>
+        <Expertise items={ExpertiseStructure} />
+      </Suspense>
       <About items={AboutStructure} />
       <ProjectsPage items={ProjectsStructure} />
       <ContactJosh items={ContactStructure} />
     </div>
   );
-}
+};
+
+export default HomePage;
