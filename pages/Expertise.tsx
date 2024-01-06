@@ -1,8 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
 import Image, { StaticImageData } from "next/image";
-import { motion } from "framer-motion";
-import useAnimationHook from "../hooks/useAnimation";
 
 interface ExpertiseStructure {
   logoSrc: StaticImageData;
@@ -15,29 +13,18 @@ interface ExpertiseProps {
 }
 
 const Expertise: React.FC<ExpertiseProps> = ({ items }) => {
-  const { controls, animation } = useAnimationHook({
-    duration: 0.5,
-    delay: 0.5,
-  });
-
-  useEffect(() => {
-    controls.start("visible");
-  }, [controls]);
-
   return (
     <section className="">
       <div className="flex flex-col justify-center items-center p-5">
-        <h1 className="text-4xl pb-5 md:text-6xl text-[#c3c4c7] font-['Bebas']">
+        <h1 className="text-4xl pb-5 m-24 md:text-6xl text-[#c3c4c7] font-['Merriweather']">
           My expertise
         </h1>
         <div className="flex flex-col md:flex-row first-letter:p-5">
           {items &&
             items.map((item, index) => (
-              <motion.div
+              <div
                 key={index}
                 className="flex flex-col h-auto w-full md:w-1/2 border-white border-4 rounded-lg md:border-6 p-5 mb-5 md:m-5 items-center"
-                {...animation}
-                custom={index}
               >
                 <div className="flex flex-row align-middle items-center">
                   <Image
@@ -51,14 +38,14 @@ const Expertise: React.FC<ExpertiseProps> = ({ items }) => {
                       height: "auto",
                     }}
                   />
-                  <h2 className="text-[#c3c4c7] text-3xl text-center p-6 font-['Bebas'] font-medium">
+                  <h2 className="text-[#c3c4c7] text-3xl text-center p-6 font-['Merriweather'] font-medium">
                     {item.title}
                   </h2>
                 </div>
-                <p className="text-[#c3c4c7] text-lg md:text-2xl font-['Bebas'] font-normal">
+                <p className="text-[#c3c4c7] text-lg md:text-2xl font-['Roboto Slab'] font-normal">
                   {item.description}
                 </p>
-              </motion.div>
+              </div>
             ))}
         </div>
       </div>

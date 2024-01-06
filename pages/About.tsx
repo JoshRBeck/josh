@@ -16,7 +16,7 @@ const About: React.FC<AboutProps> = ({ items }) => {
   return (
     <section>
       <div className="flex flex-col justify-center items-center">
-        <h1 className="text-4xl md:text-6xl text-[#c3c4c7] font-['Bebas']">
+        <h1 className="text-4xl m-24 md:text-6xl text-[#c3c4c7] font-['Merriweather']">
           About Me
         </h1>
         <div className="flex flex-col md:flex-row">
@@ -35,14 +35,15 @@ const About: React.FC<AboutProps> = ({ items }) => {
                     className="rounded-xl border-4 border-gray-200"
                     style={{
                       maxWidth: "100%",
-                      height: "auto"
-                    }} />
+                      height: "auto",
+                    }}
+                  />
                 </div>
                 <div className="flex flex-col md:w-1/2 h-auto items-center">
-                  <h2 className="text-2xl md:text-3xl font-[Bebas] text-[#c3c4c7]">
+                  <h2 className="text-2xl md:text-3xl font-[Merriweather] text-[#c3c4c7]">
                     {item.title}
                   </h2>
-                  <p className="text-lg text-center font-[Bebas] text-[#c3c4c7]">
+                  <p className="text-lg text-center font-[Merriweather] text-[#c3c4c7]">
                     {item.description}
                   </p>
                 </div>

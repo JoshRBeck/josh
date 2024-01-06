@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-gradient-to-r from-slate-900 via-stone-800 to-red-800 fixed nav">
+    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-gradient-to-r from-slate-900 to-stone-800 fixed nav">
       <div>
         {/* <h1 className="text-5xl font-signature ml-2"><a className="link-underline hover:transition ease-in-out delay-150 hover:underline hover:decoration-solid" href="">Logo</a></h1> */}
         <h1 className="text-[#2dc7ed] text-4xl md:text-5xl font-extrabold font-signature ml-2">
@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
             rel="noreferrer"
           >
             Joshua Beck
-            <span>.</span>
+            <span className="text-white">.</span>
             <span className="text-[#a234d9]">_</span>
           </a>
         </h1>
@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
         {links.map(({ id, link }) => (
           <li
             key={id}
-            className="nav-links px-4 cursor-pointer capitalize font-medium text-white-500 hover:scale-105 hover:text-white duration-200 link-underline"
+            className="nav-links px-4 cursor-pointer capitalize font-medium text-[#c3c4c7] hover:scale-105 hover:text-white duration-200 link-underline"
           >
             <Link href={link}>{link}</Link>
           </li>
@@ -62,11 +62,11 @@ const Navbar: React.FC = () => {
       </div>
 
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-40% bg-gradient-to-r from-slate-900 via-stone-800 to-red-800 text-white-500">
+        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-40% bg-gradient-to-r from-slate-900 to-stone-800 text-white-500">
           {links.map(({ id, link }) => (
             <li
               key={id}
-              className="px-4 cursor-pointer capitalize py-6 text-4xl"
+              className="px-4 cursor-pointer capitalize py-6 text-[#c3c4c7] text-4xl"
             >
               <Link onClick={() => setNav(!nav)} href={link}>
                 {link}

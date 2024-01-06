@@ -10,13 +10,13 @@ import ContactStructure from "../data/ContactStructure";
 
 export default function Home() {
   return (
-    <div className="bg-gradient-to-r from-slate-900 via-stone-800 to-red-800">
+    <div className="bg-gradient-to-r from-slate-900 to-stone-800">
       <Navbar />
       <div className="flex flex-col items-center align-middle justify-center pb-48">
-        <h1 className="text-6xl md:text-8xl text-[#c3c4c7] pt-48 font-['Bebas']">
+        <h1 className="text-6xl md:text-8xl text-[#c3c4c7] pt-48 font-['Merriweather']">
           Joshua Beck
         </h1>
-        <h3 className="text-4xl md:text-6xl text-[#c3c4c7] font-['Bebas']">
+        <h3 className="text-4xl md:text-6xl text-[#c3c4c7] font-['Merriweather']">
           Web developer
         </h3>
       </div>

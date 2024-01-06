@@ -15,32 +15,32 @@ interface ContactProps {
 const ContactLink: React.FC<{ href: string; children: ReactNode }> = ({
   href,
   children,
-}) => <Link href={href}>{children}</Link>;
+}) => (
+  <Link href={href} target="_blank" rel="noopener noreferrer">
+    {children}
+  </Link>
+);
 
 const ContactJosh: React.FC<ContactProps> = ({ items }) => {
   return (
     <section>
       <div className="flex flex-col items-center justify-center pb-10">
-        <h1 className="text-4xl pb-5 md:text-6xl text-[#c3c4c7] font-['Bebas']">
+        <h1 className="text-4xl pb-5 m-16 md:text-6xl text-[#c3c4c7] font-['Merriweather']">
           Contact Me
         </h1>
-        <div className="flex flex-col px-5 w-full md:flex-row items-center ">
+        <div className="w-full p-10 flex flex-col justify-around">
           {items &&
             items.map((item, index) => (
               <ContactLink key={index} href={item.link}>
-                <div className="flex flex-col md:flex-row mx-4 py-2 border-white border-4 rounded-lg justify-center items-center mb-4 md:mb-0 w-100 md:w-[33.333%]">
+                <div className="w-full md:w-[calc(33.33% - 2rem)] mb-4 md:mb-5 border-4 border-white rounded-lg flex flex-row items-center justify-center overflow-hidden transition-transform transform hover:scale-105">
                   <Image
                     src={item.iconSrc}
                     alt={item.title}
                     width={45}
                     height={45}
-                    className="mb-2 md:mr-2 md:mb-0"
-                    style={{
-                      maxWidth: "100%",
-                      height: "auto",
-                    }}
+                    className="mb-2 max-w-full h-auto p-2"
                   />
-                  <h2 className="text-[#c3c4c7] text-lg md:text-3xl font-['Bebas']">
+                  <h2 className="text-[#c3c4c7] text-md md:text-3xl font-['Merriweather'] p-3">
                     {item.title}
                   </h2>
                 </div>
